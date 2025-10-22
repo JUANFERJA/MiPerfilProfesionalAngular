@@ -1,0 +1,53 @@
+  <div class="d-flex flex-column">
+    <div class="encabezado-sobre-mi">
+            <h1 class="titulo">¡Hola! Mi nombre es {{dataPersonal.nombre}} {{dataPersonal.apellido}}</h1>
+            <p class="descripcion mt-3">{{dataPersonal.descripcion}}</p>
+    </div>
+
+    <div class='d-flex flex-row contenido-sobre-mi'>  
+        
+        <img class='imagen-perfil  mt-5' [src]="dataPersonal.foto" alt='Mi perfil' />
+        
+        <div class="card card-datos-personales mt-5 d-flex flex-row">
+        <div>
+            <h4 class="subtitulo m-2">Presentación Personal:</h4>
+            <h5 class="m-3">Edad: {{dataPersonal.edad}}</h5>
+            <div>
+            <h5 class="m-3">Profesión</h5>
+            <div class="m-5 mt-0">
+                <p><strong>Titulo:</strong> {{dataPersonal.profesion.titulo}}</p>
+                <p><strong>Posición:</strong> {{dataPersonal.profesion.posicion}}</p>
+                <p><strong>Registro:</strong> {{dataPersonal.profesion.registro}}</p>
+            </div>
+            <h5 class="m-3">Contacto</h5>
+            <div class="m-5 mt-0">
+                <p><strong>Teléfono:</strong> {{dataPersonal.contacto.telefono}}</p>
+                <p><strong>Email:</strong> <a [href]="'mailto:' + dataPersonal.contacto.email" class="link">{{dataPersonal.contacto.email}}</a></p>
+                <p><strong>LinkedIn:</strong> <a [href]="dataPersonal.contacto.linkedin" target="_blank" class="link">{{dataPersonal.contacto.linkedin}}</a></p>
+                <p><strong>GitHub:</strong> <a [href]="dataPersonal.contacto.github" target="_blank" class="link">{{dataPersonal.contacto.github}}</a></p>
+            </div>
+            </div>  
+        </div>
+        
+        <div class="habilidades">
+                <h4 class="subtitulo m-2">Habilidades:</h4>
+                <div class="habilidades-container m-3">
+                    <div class="columna-habilidades">
+                    <ul class="lista-habilidades">
+                        @for(habilidad of dataPersonal.habilidades; track habilidad.nombre) {
+                                    <li key={index} class="habilidad-item">
+                                            <fa-icon [icon]="habilidad.icon" class="icono-habilidad"></fa-icon> 
+                                            <span class="nombre-habilidad">{{habilidad.nombre}}</span>
+                                            <span class="nivel-habilidad">{{habilidad.nivel}}</span>
+                                            <div class="barra-progreso">
+                                            <div class="progreso" [style.width.%]="habilidad.porcentaje"></div>
+                                            </div>
+                                        </li>
+                        }
+                    </ul>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+ </div>

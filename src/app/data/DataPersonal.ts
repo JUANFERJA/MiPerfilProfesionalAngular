@@ -1,0 +1,45 @@
+import PresentacionPersonalData from "../models/ModelDataPersonal"
+import { faReact, faJs, faHtml5, faCss3Alt, faAngular, faNodeJs, faGitAlt } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faCog, faLayerGroup, faCode } from '@fortawesome/free-solid-svg-icons';
+
+const profesion = {
+    titulo: 'Analista de Sistemas',
+    posicion: 'Senior Developer Full Stack',
+    registro: '2250-2021-2283382'
+}
+
+const contacto = {
+    telefono: '+593 991323946',
+    email: 'jufer_tar_lch@hotmail.com',
+    linkedin: 'https://www.linkedin.com/in/jufer-tar-lch/',
+    github: 'https://github.com/jufer-tar-lch'
+}
+const habilidades = [
+    { nombre: 'C#', nivel: 'Avanzado', porcentaje: 90, icon: faCode },
+    { nombre: '.NET', nivel: 'Avanzado', porcentaje: 80, icon: faCog },
+    { nombre: 'JavaScript', nivel: 'Avanzado', porcentaje: 90, icon: faJs },
+    { nombre: 'TypeScript', nivel: 'Intermedio', porcentaje: 70, icon: faCode },
+    { nombre: 'HTML', nivel: 'Avanzado', porcentaje: 95, icon: faHtml5 },
+    { nombre: 'CSS', nivel: 'Avanzado', porcentaje: 85, icon: faCss3Alt },
+    { nombre: 'React', nivel: 'Avanzado', porcentaje: 75, icon: faReact },
+    { nombre: 'SqlServer', nivel: 'Intermedio', porcentaje: 70, icon: faDatabase },
+    { nombre: 'Git', nivel: 'Avanzado', porcentaje: 80, icon: faGitAlt },
+    { nombre: 'Angular', nivel: 'Intermedio', porcentaje: 60, icon: faAngular },
+    { nombre: 'Node.js', nivel: 'Intermedio', porcentaje: 70, icon: faNodeJs },
+    { nombre: 'Arquitectura de Software', nivel: 'Avanzado', porcentaje: 85, icon: faLayerGroup },
+];
+const dataPersonal: PresentacionPersonalData = {
+    nombre: 'Juan Fernando',
+    apellido: 'Jácome Castro',
+    edad: 35,
+    profesion: profesion,
+    habilidades: habilidades,
+    contacto: contacto,
+    descripcion: `Soy un apasionado desarrollador de software con más de 8 años de experiencia en el desarrollo de aplicaciones web, móviles, escritorio y backend.
+                  Especializado en tecnologías como .NET, JavaScript, React, Angular y bases de datos SQL. Me encanta crear soluciones eficientes y escalables que impulsen el éxito de los proyectos.
+                  Siempre estoy en busca de nuevos desafíos para seguir creciendo profesionalmente y aportar valor a los equipos con los que colaboro.
+                  Esta aplicación está desarrollada con Angular y TypeScript para mostrar mi perfil profesional de manera interactiva.`,
+    foto: '/perfil.jpg'
+}
+
+export default dataPersonal;

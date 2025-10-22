@@ -1,0 +1,46 @@
+.container-nav {
+    width: 100vw;
+    border-bottom: 1px solid #CFA869;
+    .botones-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+        .nav-item {
+            .nav-link {
+                text-decoration: none;
+                color: white;
+                font-weight: 400;
+                border-radius: 5px;
+
+                &:hover {
+                   background: gray;
+                }
+            }
+        }
+    }
+    .redes-sociales {
+        list-style-type: none;
+        padding: 0;
+        margin-right: 20px;
+        margin-left: auto;
+        .nav-item {
+            .nav-link {
+                text-decoration: none;
+                color: white;
+                font-weight: 400;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+
+                fa-icon {
+                    margin-right: 5px;
+                }
+
+                &:hover {
+                   font-size: 15px;
+                }
+            }
+        }
+    }    
+}
